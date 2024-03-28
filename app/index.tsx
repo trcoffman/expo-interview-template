@@ -1,6 +1,7 @@
-import { Stack, Link } from 'expo-router';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { Stack } from 'expo-router';
+import { View } from 'react-native';
 import { createStyleSheet, useStyles } from 'react-native-unistyles';
+import { RadioItem, RadioGroup } from '../components/Radio';
 
 export default function Page() {
   const { styles, theme } = useStyles(stylesheet);
@@ -10,8 +11,10 @@ export default function Page() {
       <View style={styles.main}>
         <Stack.Screen options={{ title: 'Overview' }} />
         <View>
-          <Text style={theme.components.title}>Hello World</Text>
-          <Text style={theme.components.subtitle}>This is the first page of your app.</Text>
+          <RadioGroup>
+            <RadioItem value="yes">Yes</RadioItem>
+            <RadioItem value="no">No</RadioItem>
+          </RadioGroup>
         </View>
       </View>
     </View>
