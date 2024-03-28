@@ -13,11 +13,6 @@ export default function Page() {
           <Text style={theme.components.title}>Hello World</Text>
           <Text style={theme.components.subtitle}>This is the first page of your app.</Text>
         </View>
-        <Link href={{ pathname: '/details', params: { name: 'Dan' } }} asChild>
-          <TouchableOpacity style={theme.components.button}>
-            <Text style={theme.components.buttonText}>Show Details</Text>
-          </TouchableOpacity>
-        </Link>
       </View>
     </View>
   );
